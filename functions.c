@@ -44,7 +44,7 @@ int initialize(int *array, int length)
  *     0: on success
  *     non-zero: on an error
  */
-int findMax(int *array, int length, int max)
+int findMax(const int *array, int length, int* max)
 {
   if (length < 1) 
   {
@@ -53,12 +53,12 @@ int findMax(int *array, int length, int max)
 
   int i;
 
-  max = array[0];
+  *max = array[0];
   for (i = 1; i < length; ++i)
   {
-    if (max < array[i])
+    if (*max < array[i])
     {
-      max = array[i];
+      *max = array[i];
     }
   }
 

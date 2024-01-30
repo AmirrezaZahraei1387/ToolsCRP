@@ -1,4 +1,4 @@
 
 
 int initialize(int *array, int length);
-int findMax(int *array, int length, int max);
+int findMax(const int *array, int length, int* max);

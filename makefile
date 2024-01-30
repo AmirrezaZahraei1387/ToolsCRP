@@ -20,10 +20,10 @@ check: all
 	./$(EXE_NAME)
 
 .PHONY: valgrind
-valgrind: $(EXE_NAME)
+valgrind: all $(EXE_NAME)
 	valgrind $(VALGRIND_FLAGS) ./$(EXE_NAME)
 
-functions.o: functions.h ToolsCRP/functions.c
+functions.o: functions.h functions.c
 	$(CC) $(CFLAGS) -c functions.c
 
 main.o: main.c
